@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FirstApp">
+
+<head>
+	<meta charset="utf-8">
+	<title>Angular Course</title>
+	<!-- CDN Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+</head>
+
+<body ng-controller="FirstController">
+	<h1>{{ "Hi " + name }}</h1>
+	<!-- Adding Dependencies -->
+	<input type="text" ng-model="name" placeholder="Write your name here">
+	<h3>Comments</h3>
+	<input type="text" ng-model="newComment.comment" placeholder="Add a comment here"> Comment
+	<br>
+	<input type="text" ng-model="newComment.username" placeholder="Add your user name here"> Username
+	<br>
+	<button ng-click="addComment()">Add comment</button>
+	<ul>
+		<li ng-repeat="comment in comments">
+			{{ comment.comment }} - <strong>{{ comment.username }}</strong>
+		</li>
+	</ul>
+	<!-- Services JSON -->
+	<!-- Adding a new post -->
+	<h3>Add a new post</h3>
+	<input type="text" ng-model="newPost.title" placeholder="Write the title">
+	<br>
+	<textarea type="text" ng-model="newPost.body" placeholder="Write the content"></textarea>
+	<br>
+	<button ng-click="addPost()">Send</button>
+	<h3>Posts List</h3>
+	<ul>
+		<li ng-repeat="post in posts">
+			<h2>{{ post.title }}</h2>
+			<p>{{ post.body }}</p>
+			<p>{{ outcome }}</p>
+		</li>
+	</ul>
+	<script src="controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+	background-color:aliceblue;
+	text-align: center;
+}
+
+.circle {
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+	border: 1px solid darkblue;
+}
+
+li {
+	list-style-type: none;
+}

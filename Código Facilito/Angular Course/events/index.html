@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+	<!-- CDN Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<style>
+		.hover {
+			background-color: darkblue;
+			color: aliceblue
+		}
+	</style>
+</head>
+<body>
+	<button ng-mouseover="flag = true" ng-mouseleave="flag = false" ng-class="{'hover': flag }">
+		Hover me		
+	</button><span ng-show="flag"> click me</span>
+	<p>{{ flag | json }}</p>
+</body>
+</html>

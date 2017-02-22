@@ -1,0 +1,9 @@
+.animated {
+	opacity: 1;		
+	transition: all 3s;
+}
+
+.animated.ng-hide {
+	opacity: 0;		
+	display: block !important;
+}

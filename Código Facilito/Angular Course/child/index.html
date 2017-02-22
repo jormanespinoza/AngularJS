@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainModule">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Child</title>	
+	<!-- CDN Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="controller.js"></script>
+</head>
+<body ng-controller="MainController">
+	<p></p><strong>Child Value:</strong> {{ name }}</p>
+	<p><strong>Parent Value:</strong> {{ $parent.name }}</p>
+	<div ng-controller="ChildController">
+		<p><strong>Child Value:</strong> {{ name }}</p>
+		<p><strong>Parent Value:</strong> {{ $parent.name }}</p>
+		<p><strong>Grand Parent Value:</strong> {{ $parent.$parent.name }}</p>
+		<!-- Changing the name of the parent with the son's name -->
+		<input type="text" ng-model="$parent.name">
+	</div>
+</body>
+</html>

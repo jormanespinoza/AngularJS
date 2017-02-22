@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainModule">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Apply Example</title>
+	<!-- CDN Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script>
+		angular.module('mainModule', [])
+			.controller('MainController', function ($scope) {
+				$scope.name = 'Jorman';
+				console.log($scope.name);
+				/*
+				setTimeout(function () {					
+					$scope.$apply(function() {
+						$scope.name = "Daniel";
+						console.log($scope.name);						
+					});
+				}, 2000);
+				*/
+			});
+		document.querySelector('#updateButton').addEventListener('click', function() {
+			$scope.name = "Daniel";
+			console.log($scope.name);				
+		});
+	</script>
+</head>
+
+<body ng-controller="MainController">
+	<h1>{{ name }}</h1>
+	<button id="updateButton">Clic here</button>
+</body>
+
+</html>
